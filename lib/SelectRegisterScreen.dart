@@ -11,6 +11,10 @@ class SelectRegisterApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+      routes: {
+        '/register': (context) => RegisterScreen(), // Define la ruta para /register
+        '/registerRepostero': (context) => RegisterReposteroScreen(), // Define la ruta para /registerRepostero
+      },
     );
   }
 }
@@ -156,6 +160,27 @@ class SelectRegisterScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+// Define las pantallas de registro que serán usadas en las rutas
+class RegisterScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Registro Cliente")),
+      body: Center(child: Text("Pantalla de registro para Cliente")),
+    );
+  }
+}
+
+class RegisterReposteroScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Registro Repostero")),
+      body: Center(child: Text("Pantalla de registro para Repostero")),
     );
   }
 }
